@@ -1,0 +1,134 @@
+{
+ "cli": "keyword-research",
+ "name": "Keyword Research Tool",
+ "version": "0.1.0",
+ "description": "Keyword research tool for Python and the command line: expand one seed into up to 500 Google autocomplete keywords (questions, alphabet, prepositions, comparisons) with Google's relevance score, or read the raw suggestions of any query, as JSON or CSV. Free and open source; no Google Ads account or proxies needed.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/keyword-research-tool",
+  "page": "https://quanticdata.io/collectors/keyword-research-api/?utm_source=github&utm_medium=cli&utm_campaign=keyword-research-tool",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=keyword-research-tool",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=keyword-research-tool"
+ },
+ "commands": [
+  {
+   "name": "ideas",
+   "collector": "keyword_ideas",
+   "method": "ideas",
+   "help": "keyword ideas expanded from one seed",
+   "description": "Keyword suggestions people actually type, expanded from one seed.",
+   "positional": "seed",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "keyword",
+    "mode",
+    "relevance",
+    "probe"
+   ],
+   "sample": "keyword_ideas",
+   "inputs": [
+    {
+     "name": "seed",
+     "type": "string",
+     "required": true,
+     "description": "The keyword to expand, e.g. \"keyword research\".",
+     "arg": "seed"
+    },
+    {
+     "name": "modes",
+     "type": "string[]",
+     "required": false,
+     "description": "Which probe families to run: seed, alphabet, questions, prepositions, comparisons (default seed, questions and alphabet).",
+     "enum": [
+      "seed",
+      "alphabet",
+      "questions",
+      "prepositions",
+      "comparisons"
+     ],
+     "default": [
+      "seed",
+      "questions",
+      "alphabet"
+     ],
+     "arg": "modes"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Google market, as an ISO country code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language, e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many keywords to deliver at most (1–500). You pay only for delivered keywords.",
+     "min": 1,
+     "max": 500,
+     "default": 50,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "suggest",
+   "collector": "google_autocomplete",
+   "method": "suggest",
+   "help": "Google autocomplete suggestions for one query",
+   "description": "Raw Google autocomplete suggestions for one seed query, with Google's relevance score.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "rank",
+    "suggestion",
+    "relevance",
+    "type"
+   ],
+   "sample": "google_autocomplete",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "The query to complete, e.g. \"keyword research\" or a partial one like \"keyword res\".",
+     "arg": "query"
+    },
+    {
+     "name": "country",
+     "type": "string",
+     "required": false,
+     "description": "Google market, as an ISO country code (us, gb, de...).",
+     "arg": "country"
+    },
+    {
+     "name": "lang",
+     "type": "string",
+     "required": false,
+     "description": "Interface language, e.g. en, it, de.",
+     "arg": "lang"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many suggestions to deliver at most (1–20). You pay only for delivered suggestions.",
+     "min": 1,
+     "max": 20,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "run_id": "cmvkshkan0u7p41o5a8a8kded",
+ "slug": "keyword_ideas",
+ "version": "1.0.1",
+ "status": "done",
+ "input": {
+  "seed": "keyword research",
+  "modes": [
+   "questions"
+  ],
+  "country": "us",
+  "lang": "en",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:50:36.231Z",
+ "results": [
+  {
+   "mode": "questions",
+   "rank": 1,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "probe": "how to keyword research",
+   "keyword": "how to keyword research for seo",
+   "relevance": 1250
+  },
+  {
+   "mode": "questions",
+   "rank": 2,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "probe": "how to keyword research",
+   "keyword": "how to keyword research for youtube",
+   "relevance": 601
+  },
+  {
+   "mode": "questions",
+   "rank": 3,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "probe": "how to keyword research",
+   "keyword": "how to keyword research for google ads",
+   "relevance": 600
+  }
+ ],
+ "_note": "Real run of 2026-10-23."
+}

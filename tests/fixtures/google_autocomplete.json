@@ -1,0 +1,39 @@
+{
+ "run_id": "cmvkshll20u7v41o5kb2d1iac",
+ "slug": "google_autocomplete",
+ "version": "1.0.1",
+ "status": "done",
+ "input": {
+  "query": "keyword research",
+  "country": "us",
+  "lang": "en",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:50:37.590Z",
+ "results": [
+  {
+   "rank": 1,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "relevance": 1250,
+   "suggestion": "keyword research tools"
+  },
+  {
+   "rank": 2,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "relevance": 1200,
+   "suggestion": "keyword research tool free"
+  },
+  {
+   "rank": 3,
+   "seed": "keyword research",
+   "type": "QUERY",
+   "relevance": 601,
+   "suggestion": "keyword research free"
+  }
+ ],
+ "_note": "Real run of 2026-10-23."
+}
